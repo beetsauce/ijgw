@@ -26,3 +26,7 @@
 .episode-desc {
   padding-bottom: 15px;
 }
+
+audio {
+  width: 100%;
+}

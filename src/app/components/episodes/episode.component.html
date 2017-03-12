@@ -6,102 +6,30 @@
 
       <div class="col-md-9">
 
-        <div class="episode-panel">
+        <div class="episode-panel" *ngFor="let episode of epsisodes">
           <div class="panel panel-default">
             <div class="panel-heading">
-              Episode #3
-              <small class="pull-right">Feb 20, 2017</small>
+              Episode #{{ episode.id }}
+              <small class="pull-right">{{ episode.date | date : 'longDate' }}</small>
             </div>
             <div class="panel-body">
               <div class="col-md-4">
-                <img src="..\..\assets\img\47825525-random-image.jpg">
+                <img src="{{ episode.image }}">
               </div>
               <div class="col-md-8">
                 <div>
-                  <h3>Episode Title</h3>
+                  <h3>{{ episode.title }}</h3>
                 </div>
                 <div class="episode-desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                  ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat. Duis aute irure dolor in
-                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum.
+                  {{ episode.description }}
                 </div>
-                <button class="btn btn-default">
-                  <span class="glyphicon glyphicon-play"></span>
-                  Listen
-                </button>
+                <audio controls>
+                  <source src="{{ episode.location }}" type="audio/mpeg">
+                </audio>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="episode-panel">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              Episode #2
-              <small class="pull-right">Feb 13, 2017</small>
-            </div>
-            <div class="panel-body">
-              <div class="col-md-4">
-                <img src="..\..\assets\img\home-cat.jpg">
-              </div>
-              <div class="col-md-8">
-                <div>
-                  <h3>Episode Title</h3>
-                </div>
-                <div class="episode-desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                  ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat. Duis aute irure dolor in
-                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum.
-                </div>
-                <button class="btn btn-default">
-                  <span class="glyphicon glyphicon-play"></span>
-                  Listen
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="episode-panel">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              Episode #1
-              <small class="pull-right">Feb 6, 2017</small>
-            </div>
-            <div class="panel-body">
-              <div class="col-md-4">
-                <img src="..\..\assets\img\4424762_orig.jpg">
-              </div>
-              <div class="col-md-8">
-                <div>
-                  <h3>Episode Title</h3>
-                </div>
-                <div class="episode-desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                  ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat. Duis aute irure dolor in
-                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum.
-                </div>
-                <button class="btn btn-default">
-                  <span class="glyphicon glyphicon-play"></span>
-                  Listen
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
 
       </div>
 
