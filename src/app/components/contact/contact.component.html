@@ -4,29 +4,29 @@
       <h1>Contact Us</h1>
     </div>
 
-    <form class="form-horizontal" action="" method="post">
+    <form [formGroup]="contactUs" (ngSubmit)="sendMessage($event)" class="form-horizontal">
       <div class="form-group">
         <label for="inputName" class="col-lg-2 control-label">Full Name</label>
         <div class="col-lg-4">
-          <input type="text" class="form-control" id="inputName" placeholder="Shmuck McPutz">
+          <input formControlName="name" type="text" class="form-control" id="inputName" placeholder="Shmuck McPutz">
         </div>
       </div>
       <div class="form-group">
         <label for="inputEmail" class="col-lg-2 control-label">Email</label>
         <div class="col-lg-4">
-          <input type="text" class="form-control" id="inputEmail" placeholder="hitlerdidnothingwrong@aol.com">
+          <input formControlName="email" type="email" class="form-control" id="inputEmail" placeholder="hitlerdidnothingwrong@aol.com">
         </div>
       </div>
       <div class="form-group">
         <label for="inputSubject" class="col-lg-2 control-label">Subject</label>
         <div class="col-lg-4">
-          <input type="text" class="form-control" id="inputSubject" placeholder="Subject">
+          <input formControlName="subject" type="text" class="form-control" id="inputSubject" placeholder="Subject">
         </div>
       </div>
       <div class="form-group">
-        <label for="textArea" class="col-lg-2 control-label">Message</label>
+        <label for="message" class="col-lg-2 control-label">Message</label>
         <div class="col-lg-6">
-          <textarea class="form-control" rows="5" id="textArea"></textarea>
+          <textarea formControlName="message" class="form-control" rows="5" id="message"></textarea>
         </div>
       </div>
       <div class="form-group">
@@ -35,7 +35,6 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </div>
-
 
     </form>
 
